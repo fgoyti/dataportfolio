@@ -34,7 +34,7 @@ The visualization displays 4 hierarchical levels:
 
 1. Ensure all files are in the same directory:
    - `index.html`
-   - `visualization.js`
+   - `tree.js`
    - `UT Hierarchy - Effective on 2026-05-04.xlsx`
 
 2. Start a local web server:
@@ -87,9 +87,14 @@ Works best in modern browsers:
 ```
 .
 ├── index.html              # Main HTML page with structure and styles
-├── visualization.js        # JavaScript for data parsing and D3.js visualization
+├── tree.js                 # JavaScript for data parsing and D3.js visualization
 ├── UT Hierarchy - Effective on 2026-05-04.xlsx  # Source data
-└── README.md              # This file
+├── README.md               # This file
+├── .gitignore              # Git ignore file
+└── archive/                # Archived previous versions
+    ├── header-options.html
+    ├── starburst.html
+    └── starburst.js
 ```
 
 ## Data Structure
@@ -106,7 +111,7 @@ The Excel file contains the following hierarchy:
 
 ### Changing Colors
 
-Edit the `colorSchemes` object in `visualization.js`:
+Edit the `colorSchemes` object in `tree.js`:
 
 ```javascript
 const colorSchemes = {
